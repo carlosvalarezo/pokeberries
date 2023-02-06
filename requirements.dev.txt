@@ -1,0 +1,7 @@
+-r requirements.txt
+
+pytest==7.2.0
+pytest-cov==3.0.0
+pytest-dependency==0.5.1
+pylint==2.16.1
+Faker==13.13.0
