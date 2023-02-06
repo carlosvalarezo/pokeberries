@@ -1,5 +1,5 @@
 import os
-from data_method import FetchDataMethod
+from .data_method import FetchDataMethod
 from typing import List
 
 # LIMIT=20
