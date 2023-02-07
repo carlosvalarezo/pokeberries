@@ -20,5 +20,5 @@ class ContextData():
         """This setter provides a way to change the source of data at runtime."""
         self._fetch_data_method = fetch_data_method
 
-    def fetch_data(self) -> None:
-        self.fetch_data_method.fetch_data()
+    def fetch_data(self, endpoints=[]) -> Any:
+        return self.fetch_data_method.fetch_data(endpoints=endpoints)
