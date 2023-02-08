@@ -74,4 +74,4 @@ This file automates the tasks so that everythiong is done with just one/two comm
 - `make test` builds the test image and runs the tests inside the container (that becomes deleted once the tests are done)
 
 ### Demo
-<video src='screencast/screencast.mov' width=180/>
+[![asciicast](https://asciinema.org/a/9N0KrPxNE6Kp1ZrFvdD0fkYaV.svg)](https://asciinema.org/a/9N0KrPxNE6Kp1ZrFvdD0fkYaV)
