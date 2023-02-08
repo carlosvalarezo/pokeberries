@@ -1,6 +1,10 @@
 from flask import Blueprint, jsonify
 from middleware.berries import fetch_data_from_berries_data_source
 from service.berries import parse_raw_data_to_berries
+from service.statistics_operations import get_min_growth_time, get_max_growth_time
+from service.statistics_operations import get_mean_growth_time, get_median_growth_time
+from service.statistics_operations import get_variance_growth_time, get_frecuency_growth_time
+from service.statistics_operations import get_names_of_the_berries
 from functools import wraps
 
 
@@ -18,5 +22,11 @@ def fetch_data():
 
 @berries_endpoint.route('/allBerryStats')
 def berries_stats():
-    return jsonify({'the_result': 'the_stats'})
+    return jsonify({'berries_names': get_names_of_the_berries(berries_endpoint.berries_data),
+                    'min_growth_time': get_min_growth_time(berries_endpoint.berries_data),
+                    'median_growth_time':  round(get_median_growth_time(berries_endpoint.berries_data), 2),
+                    'max_growth_time': get_max_growth_time(berries_endpoint.berries_data),
+                    'variance_growth_time': round(get_variance_growth_time(berries_endpoint.berries_data), 2),
+                    'mean_growth_time': round(get_mean_growth_time(berries_endpoint.berries_data), 2),
+                    'frequency_growth_time': get_frecuency_growth_time((berries_endpoint.berries_data))})
 
