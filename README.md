@@ -85,7 +85,7 @@ It is worth mentioning that the code deployed in pythonanywhere was changed sinc
 
 ### Troubleshooting
 
-If the make commands are executed in mac please go to the Makefile and remove the `sudo` from the clauses. If the commands are executed in Linux, they should work.
-It is probably that due to the amount of requests from the service to pokeendpoint and the limited bandwidth from pythonanywhere, sometimes the service might be down. Bear in mind that this code is sync (very bad performance).
+If the docker clauses produce permission errors, please check this link: https://docs.docker.com/engine/install/linux-postinstall/#:~:text=If%20you%20don't%20want,members%20of%20the%20docker%20group.
+It is probably that due to the amount of requests from the service (this app) to pokeendpoint and the limited bandwidth from pythonanywhere, sometimes the service might be down. Bear in mind that this code is sync (very bad performance) This sync code is not in the GitHub repo. The code in the GitHub repo is async and is working.
 ![Error on async code at pythonanywhere](https://github.com/carlosvalarezo/pokeberries/blob/main/images/screen_shot.png?raw=true)
 
