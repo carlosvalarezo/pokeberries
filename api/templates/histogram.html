@@ -1,0 +1,18 @@
+<html lang="en">
+<body>
+  <table>
+      {% block content %}
+          {% for berry in berries %}
+          <tr>
+            <td>{{berry.get('name')}}</td>
+            <td>
+              <div style="background-color:cyan; width: {{berry.get('growth_time') * 10}}pt;">
+                {{berry.get('growth_time')}}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+      {% endblock %}
+  </table>
+</body>
+</html>

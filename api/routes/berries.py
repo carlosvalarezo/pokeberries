@@ -1,11 +1,12 @@
-from flask import Blueprint, jsonify
+from flask import (Blueprint,
+                   jsonify,
+                   render_template)
 from middleware.berries import fetch_data_from_berries_data_source
 from service.berries import parse_raw_data_to_berries
 from service.statistics_operations import get_min_growth_time, get_max_growth_time
 from service.statistics_operations import get_mean_growth_time, get_median_growth_time
 from service.statistics_operations import get_variance_growth_time, get_frecuency_growth_time
 from service.statistics_operations import get_names_of_the_berries
-from functools import wraps
 
 
 class MyBlueprint(Blueprint):
@@ -35,3 +36,7 @@ def berries_stats():
                     'mean_growth_time': round(get_mean_growth_time(berries_endpoint.berries_data), 2),
                     'frequency_growth_time': get_frecuency_growth_time((berries_endpoint.berries_data))})
 
+
+@berries_endpoint.route('/histogram')
+def render_histogram():
+    return render_template('histogram.html', berries=berries_endpoint.berries_data)
