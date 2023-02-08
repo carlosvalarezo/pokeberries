@@ -2,8 +2,8 @@
 
 This repo has three endpoints:
 
-`/health` verifies the status of the service
-`/allBerryStats` gets this data structure form poke endpoint:
+- `/health` verifies the status of the service
+- `/allBerryStats` gets this data structure form poke endpoint:
 ```
 {
     "berries_names": [...],
@@ -15,7 +15,7 @@ This repo has three endpoints:
     "frequency_growth_time": ""
 }
 ```
-`/histogram` returns the `HTML` code needed to see the berries data in a histogram graph. Since the endpoint has the header `Content-Type: application/json` to render the HTML correctly copy and paste the generated HTML code to a `.html` file and load it in a browser. It comes with all the resources built-in.
+- `/histogram` returns the `HTML` code needed to see the berries data in a histogram graph. Since the endpoint has the header `Content-Type: application/json` to render the HTML correctly copy and paste the generated HTML code to a `.html` file and load it in a browser. It comes with all the resources built-in.
 
 
 ### Run
