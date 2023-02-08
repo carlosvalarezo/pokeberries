@@ -14,5 +14,3 @@ def parse_raw_data_to_berries(data: List):
     return [schema.dump(Berry(item.get('item').get('name'),
                               int(item.get('growth_time'))))
                               for item in data]
-        
-

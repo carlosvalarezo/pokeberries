@@ -72,3 +72,6 @@ It tears the dependencies apart, so that the dev dependencies are in one file an
 This file automates the tasks so that everythiong is done with just one/two commands.
 - `make run` builds the docker image and starts the app
 - `make test` builds the test image and runs the tests inside the container (that becomes deleted once the tests are done)
+
+### Demo
+<video src='screencast/screencast.mov' width=180/>
