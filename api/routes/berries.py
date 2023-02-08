@@ -1,13 +1,21 @@
 from flask import Blueprint, jsonify
 from middleware.berries import fetch_data_from_berries_data_source
+from service.berries import parse_raw_data_to_berries
+from functools import wraps
 
-berries_endpoint = Blueprint('berries', __name__)
 
-data = []
+class MyBlueprint(Blueprint):
+    bp_data = []
+    def set_data(self, data):
+        self.bp_data = parse_raw_data_to_berries(data=data)
+
+berries_endpoint = MyBlueprint('berries', __name__)
+
 
 @berries_endpoint.before_request
 def fetch_data():
     data = fetch_data_from_berries_data_source()
+    berries_endpoint.set_data(data)
 
 @berries_endpoint.route('/allBerryStats')
 def berries_stats():

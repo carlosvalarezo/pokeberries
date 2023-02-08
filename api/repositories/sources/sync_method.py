@@ -4,10 +4,10 @@ from .data_method import FetchDataMethod
 from dataclasses import dataclass
 from exceptions.endpoint_not_found import EndpointNotFoundException
 from http import HTTPStatus
-from typing import Dict, List, Any
+from typing import List, Any
 
-LIMIT=20
-OFFSET=0
+LIMIT=os.getenv('BERRY_LIMIT', 20)
+OFFSET=os.getenv('BERRY_OFFSET', 0)
 
 
 @dataclass
