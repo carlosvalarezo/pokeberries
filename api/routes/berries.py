@@ -9,12 +9,12 @@ from service.statistics_operations import get_variance_growth_time, get_frecuenc
 from service.statistics_operations import get_names_of_the_berries
 
 
-class MyBlueprint(Blueprint):
+class BerryBlueprint(Blueprint):
     berries_data = []
     def set_data(self, data):
         self.berries_data = parse_raw_data_to_berries(data=data)
 
-berries_endpoint = MyBlueprint('berries', __name__)
+berries_endpoint = BerryBlueprint('berries', __name__)
 
 @berries_endpoint.before_request
 def fetch_data():
