@@ -2,7 +2,6 @@ import pytest
 import requests
 from api.repositories.sources.context import ContextData
 from api.repositories.sources.sync_method import SyncMethod
-from api.exceptions.endpoint_not_found import EndpointNotFoundException
 from faker import Faker
 
 fake = Faker()
@@ -20,7 +19,8 @@ class MockResponse:
     @staticmethod
     def json():
         response = {"next": None,
-                    "results": [{'name': name, 'uri': uri}]}
+                    "results": [{'name': name,
+                                 'uri': uri}]}
         return response
         
 

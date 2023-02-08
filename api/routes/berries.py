@@ -20,6 +20,11 @@ def fetch_data():
     data = fetch_data_from_berries_data_source()
     berries_endpoint.set_data(data=data)
 
+@berries_endpoint.after_request
+def add_header(response):
+    response.headers['Content-Type'] = 'application/json'
+    return response
+
 @berries_endpoint.route('/allBerryStats')
 def berries_stats():
     return jsonify({'berries_names': get_names_of_the_berries(berries_endpoint.berries_data),
