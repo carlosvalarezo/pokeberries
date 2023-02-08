@@ -87,3 +87,5 @@ It is worth mentioning that the code deployed in pythonanywhere was changed sinc
 
 If the make commands are executed in mac please go to the Makefile and remove the `sudo` from the clauses. If the commands are executed in Linux, they should work.
 It is probably that due to the amount of requests from the service to pokeendpoint and the limited bandwidth from pythonanywhere, sometimes the service might be down. Bear in mind that this code is sync (very bad performance).
+![Error on async code at pythonanywhere](https://github.com/carlosvalarezo/pokeberries/blob/main/images/screen_shot.png?raw=true)
+
