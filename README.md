@@ -18,6 +18,11 @@ This repo has three endpoints:
 `/histogram` returns the `HTML` code needed to see the berries data in a histogram graph. Since the endpoint has the header `Content-Type: application/json` to render the HTML correctly copy and paste the generated HTML code to a `.html` file and load it in a browser. It comes with all the resources built-in.
 
 
+### Run
+To execute the app:
+- `make run`: builds the docker image and starts the app
+- `make test`: builds the test image and runs the tests inside the container
+
 ### Goal
 The objective of the project was to pull data from https://pokeapi.co/docs/v2#berries to get some stats about berries.
 
