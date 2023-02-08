@@ -81,4 +81,9 @@ It is also possible to see the live demo right here in these endpoints:
 - https://carlosvalarezo.pythonanywhere.com/allBerryStats
 - https://carlosvalarezo.pythonanywhere.com/histogram
 
-It is worth mentioning that the code deployed in pythonanywhere was changed since the async code was blocked to be executed. However, the demo in the asciicast shows the async code working
+It is worth mentioning that the code deployed in pythonanywhere was changed since the async code was blocked to be executed. However, the demo in the asciicast shows the async code working.
+
+### Troubleshooting
+
+If the make commands are executed in mac please go to the Makefile and remove the `sudo` from the clauses. If the commands are executed in Linux, they should work.
+It is probably that due to the amount of requests from the service to pokeendpoint and the limited bandwidth from pythonanywhere, sometimes the service might be down. Bear in mind that this code is sync (very bad performance).
