@@ -75,3 +75,10 @@ This file automates the tasks so that everythiong is done with just one/two comm
 
 ### Demo
 [![asciicast](https://asciinema.org/a/9N0KrPxNE6Kp1ZrFvdD0fkYaV.svg)](https://asciinema.org/a/9N0KrPxNE6Kp1ZrFvdD0fkYaV)
+
+It is also possible to see the live demo right here in these endpoints:
+- https://carlosvalarezo.pythonanywhere.com/health
+- https://carlosvalarezo.pythonanywhere.com/allBerryStats
+- https://carlosvalarezo.pythonanywhere.com/histogram
+
+It is worth mentioning that the code deployed in pythonanywhere was changed since the async code was blocked to be executed. However, the demo in the asciicast shows the async code working
